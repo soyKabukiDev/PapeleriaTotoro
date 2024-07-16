@@ -7,11 +7,12 @@ import type {
 } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
 import internal from 'stream';
+import { ProductComponent } from './product/product.component';
 
 @Component({
   selector: 'app-iniciou',
   standalone: true,
-  imports: [],
+  imports: [ProductComponent],
   templateUrl: './iniciou.component.html',
   styleUrl: './iniciou.component.css'
 })
