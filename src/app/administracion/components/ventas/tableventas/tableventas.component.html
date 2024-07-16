@@ -1,1 +1,136 @@
-<p>tableventas works!</p>
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Codigo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Producto
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Costo Unitario $
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Unidades
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Subtotal
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="flex items-center px-6 py-4">
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    00000000
+                </th>
+                <td class="px-6 py-4">
+                    Boligrafo BIC Punto Fino Negro
+                </td>
+                <td class="px-6 py-4">
+                    3.50
+                </td>
+                <td class="px-6 py-4">
+                    4
+                </td>
+                <td class="px-6 py-4">
+                    14
+                </td>
+                
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="flex items-center px-6 py-4">
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    00000001
+                </th>
+                <td class="px-6 py-4">
+                    Lapiz 1/2
+                </td>
+                <td class="px-6 py-4">
+                    7
+                </td>
+                <td class="px-6 py-4">
+                    2
+                </td>
+                <td class="px-6 py-4">
+                    14
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="flex items-center px-6 py-4">
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    00000002
+                </th>
+                <td class="px-6 py-4">
+                    Libreta Scribe 100 h
+                </td>
+                <td class="px-6 py-4">
+                    22
+                </td>
+                <td class="px-6 py-4">
+                    5
+                </td>
+                <td class="px-6 py-4">
+                    110
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="flex items-center px-6 py-4">
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    00000003
+                </th>
+                <td class="px-6 py-4">
+                    Papel Bond Cuadro Ch.
+                </td>
+                <td class="px-6 py-4">
+                    3
+                </td>
+                <td class="px-6 py-4">
+                    3
+                </td>
+                <td class="px-6 py-4">
+                    9
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--============================================
+Aqui se agrega el total de la compra dentro de un input de texto con estado disabled 
+fuera de la tabla de la venta
+igualforma se agrega el boton de venta para ejecutar el guardado de la venta 
+=============================================-->
+<div class="relative sm:rounded-lg mx-auto" id="Total_v">
+    <div class="flex" id="Interno">
+        <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+            <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">TOTAL
+                $</label>
+        </span>
+        <input disabled type="text" id="Costo_final"
+            class="rounded-none bg-gray-50 border border-gray-300 text-gray-900 block flex-1 min-w-0 w-full text-lg text-center p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            value="147">
+        <button type="button"
+            class="text-white rounded-none rounded-e-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="w-3.5 h-3.5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 18 21">
+                <path
+                    d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
+            </svg>
+            Venta
+        </button>
+    </div>
+</div>
