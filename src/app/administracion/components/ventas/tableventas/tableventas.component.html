@@ -23,87 +23,29 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            @for (observer of detail; track observer) {
+            <tr  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="flex items-center px-6 py-4">
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
                 </td>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    00000000
+                    {{observer.code}}
                 </th>
                 <td class="px-6 py-4">
-                    Boligrafo BIC Punto Fino Negro
+                    {{observer.name}}
                 </td>
                 <td class="px-6 py-4">
-                    3.50
+                    {{observer.price_unit}}
                 </td>
                 <td class="px-6 py-4">
-                    4
+                    {{observer.quantity}}
                 </td>
                 <td class="px-6 py-4">
-                    14
+                    {{observer.price_unit * observer.quantity}}
                 </td>
                 
             </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="flex items-center px-6 py-4">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    00000001
-                </th>
-                <td class="px-6 py-4">
-                    Lapiz 1/2
-                </td>
-                <td class="px-6 py-4">
-                    7
-                </td>
-                <td class="px-6 py-4">
-                    2
-                </td>
-                <td class="px-6 py-4">
-                    14
-                </td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="flex items-center px-6 py-4">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    00000002
-                </th>
-                <td class="px-6 py-4">
-                    Libreta Scribe 100 h
-                </td>
-                <td class="px-6 py-4">
-                    22
-                </td>
-                <td class="px-6 py-4">
-                    5
-                </td>
-                <td class="px-6 py-4">
-                    110
-                </td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="flex items-center px-6 py-4">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    00000003
-                </th>
-                <td class="px-6 py-4">
-                    Papel Bond Cuadro Ch.
-                </td>
-                <td class="px-6 py-4">
-                    3
-                </td>
-                <td class="px-6 py-4">
-                    3
-                </td>
-                <td class="px-6 py-4">
-                    9
-                </td>
-            </tr>
+        }
         </tbody>
     </table>
 </div>

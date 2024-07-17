@@ -1,0 +1,48 @@
+// api.service.ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiService {
+
+  private apiUrl = 'http://localhost/api/';
+
+  constructor(private http: HttpClient) { }
+
+  // Métodos para productos
+  getAllProductos(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}productos`);
+  }
+
+  createProducto(data: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}productos`, data);
+  }
+
+  updateProducto(id: number, data: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}productos?id_prod=${id}`, data);
+  }
+
+  deleteProducto(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}productos?id_prod=${id}`);
+  }
+
+  // Métodos para usuarios
+  getAllUsuarios(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}usuarios`);
+  }
+
+  createUsuario(data: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}usuarios`, data);
+  }
+
+  updateUsuario(id: number, data: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}usuarios?id_usuario=${id}`, data);
+  }
+
+  deleteUsuario(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}usuarios?id_usuario=${id}`);
+  }
+}
