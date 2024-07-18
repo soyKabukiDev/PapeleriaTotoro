@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CrudComponent } from './crud/crud.component';
 import { StockstatusComponent } from './stockstatus/stockstatus.component';
 import { AgregarproductoComponent } from './agregarproducto/agregarproducto.component';
+
 
 @Component({
   selector: 'app-inventario',
@@ -10,6 +11,8 @@ import { AgregarproductoComponent } from './agregarproducto/agregarproducto.comp
   templateUrl: './inventario.component.html',
   styleUrl: './inventario.component.css'
 })
-export default class InventarioComponent {
+export default class InventarioComponent{
+
+
 
 }

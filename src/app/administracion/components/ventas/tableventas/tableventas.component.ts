@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../../../../services/product.service';
+import { ventaService } from '../../Services/ventas.service';
 @Component({
   selector: 'app-tableventas',
   templateUrl: './tableventas.component.html',
@@ -8,19 +9,20 @@ import {ProductService} from '../../../../services/product.service';
   styleUrl: './tableventas.component.css'
 })
 export class TableventasComponent implements OnInit {
-  detail: any;
-  constructor (private productService: ProductService){
+  detail!: any[];
+  constructor(private ventaService: ventaService){
 
   }
   ngOnInit(): void {
-    this.loadDetail();
+    this.loadSell();
+    
   }
-  loadDetail(){
-    this.productService.getallDetail().subscribe(
-      (data) => {
-        this.detail = data;
-  
-      });
-      console.log(this.detail);
+  loadSell(){
+    this.ventaService.getallDetail().subscribe(
+      (data) =>{
+        this.detail=data;
+      }
+     
+    );
   }
 }
