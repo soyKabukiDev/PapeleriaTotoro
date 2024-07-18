@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,7 +12,12 @@ import { Observable } from 'rxjs';
     public getallInventory(): Observable<any[]>{
       return this.http.get<any[]>(`${this.apiUrl}productos`);
     }
-    public getstock(): Observable<any[]>{
-        return this.http.get<any[]>(`${this.apiUrl}stock_warning`);
+    public postInventory(producto: any): Observable<any>{
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json'
+      });
+      return this.http.post<any>(`${this.apiUrl}add_product`, producto, {headers});
+    
+    
     }
   }
