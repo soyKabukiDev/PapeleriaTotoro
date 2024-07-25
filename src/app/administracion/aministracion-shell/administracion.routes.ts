@@ -27,10 +27,6 @@ export default [
         loadComponent: () => import("../components/registousers/registousers.component"),
       },
       {
-        path:'login',
-        loadComponent: () => import("../auth/login/login.component"),
-      },
-      {
         path:'',
                 redirectTo:'inicio',
                 pathMatch:'full'

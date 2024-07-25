@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
@@ -11,6 +11,7 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
   templateUrl: './layout-administracion.component.html',
   styleUrl: './layout-administracion.component.css'
 })
-export default class LayoutAdministracionComponent {
+export default class LayoutAdministracionComponent{
+  
 
 }

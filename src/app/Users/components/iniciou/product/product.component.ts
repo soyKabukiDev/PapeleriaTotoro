@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { inventoryService } from '../../../../administracion/components/Services/inventario.service';
 
 @Component({
   selector: 'app-product',
@@ -8,10 +9,21 @@ import { Component } from '@angular/core';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  items= 12;
+  detail!: any[];
+  constructor(private inventoryService: inventoryService){
 
-  getRepetitionCount(count: number): number[] {
-    return Array(count).fill(0).map((_x, i) => i);
+  }
+  ngOnInit(): void {
+    this.loadinventory();
+    
+  }
+  loadinventory(){
+    this.inventoryService.getAllInventory().subscribe(
+      (data) =>{
+        this.detail=data;
+       console.log(this.detail); 
+      }
+    );
   }
 
 }

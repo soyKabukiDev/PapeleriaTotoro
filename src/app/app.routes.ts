@@ -11,6 +11,10 @@ export const routes: Routes = [
         loadChildren: () => import ('./Users/users-shell/user.route'),
     },
     {
+        path:'login',
+        loadComponent: () => import("./auth/login/login.component"),
+    },
+    {
         path:'**',
         redirectTo: '',
     }

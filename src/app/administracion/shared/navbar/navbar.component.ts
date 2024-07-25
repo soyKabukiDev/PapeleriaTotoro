@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -14,4 +15,5 @@ export class NavbarComponent {
   userName="Luis Angel Martinez Ramirez";
   mailUser="Example@xyz.com";
   rollUser="Administracion";
+
 }

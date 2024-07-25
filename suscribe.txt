@@ -1,0 +1,35 @@
+// ejemplo.component.ts
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from './api.service';
+
+@Component({
+  selector: 'app-ejemplo',
+  templateUrl: './ejemplo.component.html',
+  styleUrls: ['./ejemplo.component.css']
+})
+export class EjemploComponent implements OnInit {
+
+  productos: any[];
+  usuarios: any[];
+
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit(): void {
+    this.loadProductos();
+    this.loadUsuarios();
+  }
+
+  loadProductos() {
+    this.apiService.getAllProductos().subscribe(data => {
+      this.productos = data;
+    });
+  }
+
+  loadUsuarios() {
+    this.apiService.getAllUsuarios().subscribe(data => {
+      this.usuarios = data;
+    });
+  }
+
+  // Implementa métodos para crear, actualizar y eliminar productos y usuarios según sea necesario
+}
